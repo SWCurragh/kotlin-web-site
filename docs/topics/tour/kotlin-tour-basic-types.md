@@ -12,17 +12,17 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </tldr>
 
-Every variable and data structure in Kotlin has a type. Types are important because they tell the compiler what you are allowed to 
+Every variable and data structure in Kotlin has a type. Types are important because they tell the compiler what you can 
 do with that variable or data structure. In other words, what functions and properties it has.
 
-In the last chapter, Kotlin was able to tell in the previous example that `customers` has type [`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/).
-Kotlin's ability to **infer** the type is called **type inference**. `customers` is assigned an integer
+In the last chapter, Kotlin could tell in the previous example that `customers` has type [`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/).
+Kot lin's ability to **infer** the type is called **type inference**. `customers` is assigned an integer
 value. From this, Kotlin infers that `customers` has a numerical type `Int`. As a result, the compiler knows that you
 can perform arithmetic operations with `customers`:
 
 ```kotlin
 fun main() {
-//sampleStart
+//sample start
     var customers = 10
 
     // Some customers leave the queue
@@ -50,7 +50,7 @@ In total, Kotlin has the following basic types:
 |------------------------|------------------------------------|---------------------------------------------------------------|
 | Integers               | `Byte`, `Short`, `Int`, `Long`     | `val year: Int = 2020`                                        |
 | Unsigned integers      | `UByte`, `UShort`, `UInt`, `ULong` | `val score: UInt = 100u`                                      |
-| Floating-point numbers | `Float`, `Double`                  | `val currentTemp: Float = 24.5f`, `val price: Double = 19.99` |
+| Floating-point numbers | `Float`, `Double`                  | `val current temp: Float = 24.5f`, `val price: Double = 19.99` |
 | Booleans               | `Boolean`                          | `val isEnabled: Boolean = true`                               |
 | Characters             | `Char`                             | `val separator: Char = ','`                                   |
 | Strings                | `String`                           | `val message: String = "Hello, world!"`                       |
@@ -64,9 +64,9 @@ To declare a variable without initializing it, specify its type with `:`. For ex
 
 ```kotlin
 fun main() {
-//sampleStart
+//sample start
     // Variable declared without initialization
-    val d: Int
+    Val d: Int
     // Variable initialized
     d = 3
 
@@ -76,7 +76,7 @@ fun main() {
     // Variables can be read because they have been initialized
     println(d) // 3
     println(e) // hello
-//sampleEnd
+//sampled
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-basic-types-initialization"}
@@ -85,14 +85,14 @@ If you don't initialize a variable before it is read, you see an error:
 
 ```kotlin
 fun main() {
-//sampleStart
+//sample start
     // Variable declared without initialization
-    val d: Int
+    Val d: Int
     
     // Triggers an error
     println(d)
     // Variable 'd' must be initialized
-//sampleEnd
+//sampled
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-basic-types-no-initialization" validate="false"}
@@ -111,7 +111,7 @@ fun main() {
     val a: Int = 1000 
     val b = "log message"
     val c = 3.14
-    val d = 100_000_000_000_000
+    Val d = 100_000_000_000_000
     val e = false
     val f = '\n'
 }
@@ -122,7 +122,7 @@ fun main() {
 ```kotlin
 fun main() {
     val a: Int = 1000
-    val b: String = "log message"
+    Val b: String = "log message"
     val c: Double = 3.14
     val d: Long = 100_000_000_000_000
     val e: Boolean = false
